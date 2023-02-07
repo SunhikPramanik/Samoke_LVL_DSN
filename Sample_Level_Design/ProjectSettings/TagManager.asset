@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - ground
   - Coin
+  - Slippery
+  - LevelChange
+  - BreakableBlocks
   layers:
   - Default
   - TransparentFX
