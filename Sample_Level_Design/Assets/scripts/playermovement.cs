@@ -30,24 +30,24 @@ public class playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.transform.position.y<-1)
+        if(this.transform.position.y<-2)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         this.transform.Translate(dir * mov_speed * Time.deltaTime);
-        if ((dir == Vector3.forward) && Input.GetKeyDown(KeyCode.D))
+        if (((dir == Vector3.forward) && Input.GetKeyDown(KeyCode.RightArrow)) || ((dir == Vector3.forward) && Input.GetKeyDown(KeyCode.D)))
         {
             dir = Vector3.right;
         }
-        if ((dir == Vector3.left)&&Input.GetKeyDown(KeyCode.D) )
+        if (((dir == Vector3.left)&&Input.GetKeyDown(KeyCode.RightArrow)) ||((dir == Vector3.left) && Input.GetKeyDown(KeyCode.D)))
         {
             dir = Vector3.forward;
         }
-        if ((dir == Vector3.forward) && Input.GetKeyDown(KeyCode.A) )
+        if (((dir == Vector3.forward) && Input.GetKeyDown(KeyCode.LeftArrow)) || ((dir == Vector3.forward) && Input.GetKeyDown(KeyCode.A)))
         {
             dir = Vector3.left;
         }
-        if ((dir == Vector3.right) && Input.GetKeyDown(KeyCode.A) )
+        if (((dir == Vector3.right) && Input.GetKeyDown(KeyCode.LeftArrow)) || ((dir == Vector3.right) && Input.GetKeyDown(KeyCode.A)))
         {
             dir = Vector3.forward;
         }
@@ -71,6 +71,13 @@ public class playermovement : MonoBehaviour
         {
             flag = true;
         }
+
+        if((transform.position.z > 28)&&(transform.position.y < -1))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            transform.position = new Vector3(8, 0.625f, 28);
+            dir = Vector3.forward;
+        }
     }
     private void FixedUpdate()
     {
@@ -86,7 +93,7 @@ public class playermovement : MonoBehaviour
         if(collision.gameObject.CompareTag("ground")==true)
         {
             onGround= true;
-        }
+        } else onGround= false;
         if (collision.gameObject.CompareTag("Enemy") == true)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
