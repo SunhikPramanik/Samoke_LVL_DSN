@@ -7598,6 +7598,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 94478085}
+    - target: {fileID: 3773940251001128116, guid: 0e7329952785c0b459d7ea131479d02f, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773940251001128116, guid: 0e7329952785c0b459d7ea131479d02f, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773940251001128116, guid: 0e7329952785c0b459d7ea131479d02f, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.1882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773940251001128116, guid: 0e7329952785c0b459d7ea131479d02f, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.19607843
+      objectReference: {fileID: 0}
     - target: {fileID: 3773940251505351286, guid: 0e7329952785c0b459d7ea131479d02f, type: 3}
       propertyPath: m_Name
       value: Cam
@@ -9026,7 +9042,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

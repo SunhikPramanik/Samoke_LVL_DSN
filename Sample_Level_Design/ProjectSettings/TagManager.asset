@@ -10,6 +10,7 @@ TagManager:
   - Slippery
   - LevelChange
   - BreakableBlocks
+  - Restart
   layers:
   - Default
   - TransparentFX
